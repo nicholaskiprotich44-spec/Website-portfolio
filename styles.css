@@ -68,6 +68,7 @@ h1, h2, h3, h4 {
 #sidemenu {
   display: flex;
   align-items: center;
+  margin-right: 0px;
   gap: 8px;
   list-style: none;
   background: rgba(85,132,181,0.25);
@@ -807,53 +808,55 @@ form .btn2 {
   opacity: 1;
 }
 
-@media (max-width: 900px) {
-  .sub-title { font-size: 40px; }
 
-  .about-col-1,
-  .about-col-2,
-  .contact-left,
-  .contact-right {
-    flex: 0 0 100%;
-    max-width: 100%;
+/* DESKTOP */
+@media only screen and (min-width: 769px){
+
+  .menu-icon{
+    display: none !important;
   }
 
-  .header-text {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 48px 0 60px;
-    gap: 32px;
+  #sidemenu{
+    display: flex !important;
+    position: static;
+    height: auto;
+    width: auto;
+    background: rgba(85,132,181,0.25);
+    flex-direction: row;
+    padding: 8px 20px;
   }
 
-  .container-text h2 { font-size: 36px; }
-  .name-big { font-size: 44px; }
-
-  .hero-buttons { justify-content: center; }
-
-  .profile-ring {
-    width: 240px;
-    height: 240px;
-  }
-
-  .typing { font-size: 22px; }
-  .cursor { font-size: 22px; }
-
-  .contact-left {
-    margin-bottom: 12px;
-  }
 }
 
+/* MOBILE */
+@media only screen and (max-width: 768px){
 
-@media (max-width: 600px) {
-  html { font-size: 15px; }
+  html{
+    font-size: 15px;
+  }
 
-  .container { width: 94%; padding: 0 12px; }
+  .container{
+    width: 94%;
+    padding: 0 12px;
+  }
 
-  /* Navbar */
-  .menu-icon { display: block;
-              width:60% }
+  /* SHOW HAMBURGER */
+  .menu-icon{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-  #sidemenu {
+  /* SIDEMENU */
+  #sidemenu{
     position: fixed;
     top: 0;
     right: -100%;
@@ -862,63 +865,157 @@ form .btn2 {
     height: 100vh;
     background: rgba(9,31,49,0.97);
     backdrop-filter: blur(16px);
-    border-radius: 0;
-    border-left: 1px solid rgba(255,255,255,0.1);
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
-    padding: 72px 24px 32px;
-    transition: right 0.4s cubic-bezier(.4,0,.2,1);
-    z-index: 999;
+    gap: 10px;
+    padding: 80px 24px 32px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    border-radius: 0;
   }
 
-  #sidemenu.open { right: 0; }
+  /* OPEN MENU */
+  #sidemenu.open{
+    right: 0;
+  }
 
-  #sidemenu li {
+  /* MENU ITEMS */
+  #sidemenu li{
+    width: 100%;
+    display: block;
+  }
+
+  .nav-link{
     display: block;
     width: 100%;
-  }
-
-  .nav-link {
-    display: block;
+    padding: 14px 16px;
     font-size: 18px;
-    padding: 12px 16px;
     border-radius: 10px;
   }
 
-  #sidemenu .close-icon {
+  /* CLOSE ICON */
+  #sidemenu .close-icon{
     display: block;
     position: absolute;
     top: 24px;
     right: 24px;
-    font-size: 20px;
-    color: var(--muted);
+    font-size: 24px;
+    color: #fff;
     cursor: pointer;
   }
 
-  /* Hero */
-  #header { min-height: 100svh; }
-
-  .header-text {
-    padding: 32px 0 48px;
+  /* HERO SECTION */
+  .header-text{
+    flex-direction: column-reverse;
+    text-align: center;
     gap: 24px;
+    padding: 40px 0 50px;
   }
 
-  .container-text h2 { font-size: 28px; }
-  .name-big { font-size: 34px; }
-  .hero-sub { font-size: 14px; }
-  .typing { font-size: 18px; }
-  .cursor { font-size: 18px; }
+  .container-text h2{
+    font-size: 28px;
+  }
 
-  .profile-ring {
+  .name-big{
+    font-size: 34px;
+  }
+
+  .typing,
+  .cursor{
+    font-size: 18px;
+  }
+
+  .profile-ring{
     width: 190px;
     height: 190px;
   }
 
-  .hero-buttons {
-    flex-direction: row;
+  .hero-buttons{
+    justify-content: center;
     gap: 12px;
+    flex-wrap: wrap;
   }
+
+  .btn{
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+
+  section{
+    padding: 64px 0;
+  }
+
+  .sub-title{
+    font-size: 32px;
+  }
+
+  .about-col-1,
+  .about-col-2,
+  .contact-left,
+  .contact-right{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row{
+    gap: 28px;
+  }
+
+  /* PORTFOLIO */
+  .layer{
+    opacity: 1;
+  }
+
+  .layer p{
+    display: none;
+  }
+
+  .work-list{
+    gap: 20px;
+  }
+
+  /* CONTACT */
+  .social-icons a{
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  form input,
+  form textarea{
+    padding: 13px 16px;
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .footer-container{
+    gap: 28px;
+  }
+
+}
+
+/* EXTRA SMALL DEVICES */
+@media only screen and (max-width: 380px){
+
+  .container-text h2{
+    font-size: 24px;
+  }
+
+  .name-big{
+    font-size: 28px;
+  }
+
+  .profile-ring{
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-buttons{
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
 
   .btn { padding: 11px 22px; font-size: 14px; }
 

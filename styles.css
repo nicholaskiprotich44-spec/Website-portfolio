@@ -808,6 +808,9 @@ form .btn2 {
   opacity: 1;
 }
 
+/* =========================
+   RESPONSIVE NAVBAR FIX
+========================= */
 
 /* DESKTOP */
 @media only screen and (min-width: 769px){
@@ -1014,8 +1017,6 @@ form .btn2 {
     flex-direction: column;
     align-items: center;
   }
-
-}
 
   .btn { padding: 11px 22px; font-size: 14px; }
 

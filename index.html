@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/a6bfbf0366.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header -->
+<div id="header">
+     <div class="blur-layer">
+    <div class="container">
+<!-- navigation section -->
+        <nav>
+            <div class="logo">
+                <h1><span class="change">N</span>ick.</h1>
+            </div>
+
+            <ul id="sidemenu">
+                <li><a href="#header"class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()" type="button"></i>
+            </ul>
+
+            <i class="fa-solid fa-bars" onclick="openmenu()" type="button"></i>
+        </nav>
+<!-- header content -->
+<div class="header-text">
+       <div class="container-text">
+    <div><p class="typing"></p></div> 
+    <h2>
+        Hello,<br>
+        I'm <span class="change">Nicholas</span> Kiprotich <br>
+        <small>Full-Stack Developer | Building scalable digital solutions</small>
+    </h2>
+        <div class="hero-buttons">
+            <button class="btn primary" onclick="scrollToPortfolio()">View My Work</button>
+            <a href="#contact"><button class="btn outline">Hire Me</button></a>
+            </div>
+        </div>
+
+            <div class="container-profile">
+                <img src="images\image-background.png" alt="Profile Image" class="profile-img">
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+</div>
+
+<!-- about -->
+<div id="about" class="reveal">
+    <div class="container">
+        <div class="row">
+
+            <div class="about-col-1" reveal>
+                <img src="images\about-me.jpeg" alt="About image">
+            </div>
+
+            <div class="about-col-2" reveal>
+                <h1 class="sub-title">About me</h1>
+
+                <p>
+               I am a passionate Computer Science professional with a solid foundation in networking 
+               and full-stack web development. I enjoy creating practical digital solutions that address
+                real-world challenges. My experience spans building web applications, managing databases,
+                 and understanding network systems. I continuously explore new technologies and enhance my
+                  skills to deliver efficient, scalable, and user-friendly applications.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Full-Stack Web Development</span><br>Building responsive, full-featured web applications from frontend to backend</li>
+                        <li><span>Cloud & DevOps</span><br>Deploying scalable and reliable applications using cloud platforms and DevOps practices</li>
+                        <li><span>Web Application Security & Networking</span><br>Ensuring secure and efficient web applications through networking and best-practice security measures</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Kerugoya County Referral Hospital(2024)</span><br>Supported IT operations and system management, assisting with network
+                             maintenance and technical troubleshooting as an attache</li>
+                        <li><span>Nandi County Assembly(2023)</span><br>Assisted with IT support and system management at Nandi County Assembly as an attache</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Kirinyaga University(2021-2025)</span><br>Bachelor of Science in Computer Science</li>
+                        <li><span>St. Marks Kiminda Secondary School(2016-2020)</span><br>KCSE Certification</li>
+                        <li><span>Burgei Primary School(2007-2015)</span><br>KCPE Certification</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- services -->
+<div id="services" class="services reveal">
+    <div class="container">
+
+        <h1 class="sub-title">My Services</h1>
+
+        <div class="services-list">
+
+            <div class="reveal">
+                <i class="fa-solid fa-code"></i>
+                <h2>Full-Stack Web Development</h2>
+                <p>
+                I build complete web applications, handling both frontend and backend. I focus
+                 on creating responsive, scalable, and user-friendly applications using modern
+                  frameworks, databases, and server technologies.
+                </p>
+                
+            </div>
+
+            <div class="reveal">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <h2>Cloud & DevOps Solutions</h2>
+                <p>
+                I deploy and manage applications on cloud platforms, applying DevOps practices 
+                for automation, scalability, and reliability. My goal is to ensure efficient and
+                 seamless software deployments.
+                </p>
+            
+            </div>
+
+            <div class="reveal">
+                <i class="fa-solid fa-network-wired"></i>
+                <h2>Web Application Security & Networking</h2>
+                <p>
+              I make web applications secure and efficient by following best practices in security,
+               authentication, and network management. This helps protect data, prevent vulnerabilities,
+                and optimize performance.
+                </p>
+        
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- portfolio -->
+<div id="portfolio" class="reveal">
+    <div class="container">
+
+        <h1 class="sub-title">My Work</h1>
+
+        <div class="work-list">
+
+            <div class="work reveal">
+                <img src="images\HMS.png" alt="Hotel Management System">
+                <div class="layer">
+                    <h3>Hotel Management System</h3>
+<p>
+This Hotel Management System helps streamline all aspects of hotel operations, 
+from booking and check-ins to room management and billing. It provides an intuitive 
+dashboard for staff and management, ensuring efficient handling of reservations, 
+guest services, and reporting.
+</p>
+                    <a href="https://github.com/nicholaskiprotich44-spec/GVH---Hotel-Management-System.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work reveal">
+                <img src="images\TME.png" alt="Task Planner Ecosystem">
+                <div class="layer">
+                    <h3>Task Planner Ecosystem</h3>
+                    <p>
+                   This planner is a gamified productivity ecosystem that transforms the 
+                   academic grind into a high-reward experience through a visual XP leveling
+                    system. Its specialized Student Edition combines AI-driven study roadmaps 
+                    with customizable Pomodoro tools to keep you organized, motivated, 
+                    and exam-ready.
+                    </p>
+                    <a href="https://github.com/nicholaskiprotich44-spec/Personal-Productivity-Platform.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work reveal">
+                <img src="images\Home furniture.png" alt="Social App">
+                <div class="layer">
+                    <h3>Home Furnitures system</h3>
+                    <p>
+                   BravonHomes is a full-stack furniture management platform designed to bridge
+                    the gap between high-end product showcasing and robust inventory control.
+                     Built for modern retailers, the system features a dynamic product catalog,
+                      real-time stock management, and an intuitive administrative dashboard.
+                    </p>
+                    <a href="https://github.com/nicholaskiprotich44-spec/Home-Furniture-System.git"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="https://github.com/nicholaskiprotich44-spec" class="btn">See more</a>
+
+    </div>
+</div>
+
+<!-- contact -->
+<div id="contact" class="reveal">
+    <div class="container">
+        <div class="row">
+
+            <div class="contact-left reveal">
+
+                <h1 class="sub-title">Contact Me</h1>
+
+                <p><i class="fa-solid fa-paper-plane"></i> nicholaskiprotich44@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +254768532510</p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/14bE4og9t3m/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/Nichola74602044" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/nickbravo_01?igsh=N3k0NXlndjhydm1k"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/nicholas-kiprotich-2aa530230" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+
+                <a href="images\Curriculum Vitae .pdf" download class="btn btn2">Download Cv</a>
+
+            </div>
+
+            <div class="contact-right reveal">
+
+                <form name="submit-to-google-sheet">
+
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+
+                <span id="msg"></span>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-col">
+      <h3>Nicholas Kiprotich</h3>
+      <p>
+        Full-Stack Developer passionate about building scalable web applications
+        and solving real-world problems through technology.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#header"class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services / Skills -->
+    <div class="footer-col">
+      <h4>What I Do</h4>
+      <ul>
+        <li>Web Development</li>
+        <li>Backend Development</li>
+        <li>API Development</li>
+        <li>Networking Solutions</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact Me</h4>
+      <a href="mailto:nicholas.kiprotich@example.com?subject=Project%20Opportunity&body=Hello%20Nicholas,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20hire%20you."><p>Email: nicholaskiprotich44@gmail.com</p></a>
+      <p>Phone: +254 725978947</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/nicholas-kiprotich-2aa530230" target="_blank">LinkedIn</a>
+        <a href="https://github.com/nicholaskiprotich44-spec" target="_blank">GitHub</a>
+        <a href="https://wa.me/254725978947" target="_blank"class="whatsapp-btn">WhatsApp</a>
+         <a href="https://x.com/Nichola74602044" target="_blank">Twitter</a>
+         <a href="https://www.facebook.com/share/14bE4og9t3m/" target="_blank">Facebook</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 Nicholas Kiprotich | Built with passion 🚀</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
